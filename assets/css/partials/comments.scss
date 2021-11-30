@@ -1,0 +1,202 @@
+form#commentform {
+
+  .form-group {
+    &.error {
+      padding-left: $gutterHalf;
+      border-left: 4px solid $alertColour;
+      textarea, input {
+          border-color: $alertColour;
+          border-width: 4px;
+      }
+    }
+  }
+
+  label {
+      .error {
+          display:block;
+          clear:left;
+          color: $alertColour;
+      }
+  }
+
+  label[for="email"] {
+    padding-bottom: 0;
+  }
+
+  textarea {
+    width: 100%;
+    display: block;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 50%;
+
+    @media (max-width: $mobileMaxWidth) {
+      padding: 15px;
+      width: 100%;
+    }
+  }
+
+  input[type="submit"] {
+    margin-top: 0;
+    margin-bottom: $gutter;
+  }
+}
+
+#respond {
+  h3 {
+    width: 70%;
+    float: left;
+
+    @media (max-width: $mobileMaxWidth) {
+      width: 100%;
+      float: none;
+    }
+  }
+
+  .govuk-error-summary__body {
+    clear: both;
+  }
+
+  .alert.error-summary {
+    display: block;
+    border-color: $alertColour;
+      h3 {
+        width: 100%;
+        margin-top: 0;
+      }
+      p {
+        margin-bottom: $gutterHalf;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+      a {
+        color: $alertColour;
+        font-weight: 600;
+      }
+  }
+}
+
+.comments, .leave-a-comment {
+
+  p.cancel-comment-reply {
+    width: 30%;
+    margin: 0;
+    float: right;
+    margin: 2.6em 0 0 0;
+    padding: 0;
+    text-align: right;
+    @include govuk-font(16);
+
+    a {
+      text-decoration: underline;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      width: 100%;
+      float: none;
+      margin-top: 0;
+      margin-bottom: $gutterHalf;
+      text-align: left;
+    }
+  }
+}
+
+.comments {
+
+  .media-body {
+
+    a {
+      text-decoration: underline;
+    }
+
+    a.comment-reply-link {
+      font-weight: 700;
+    }
+
+    a:focus {
+      text-decoration: none;
+    }
+  }
+
+  .media-heading {
+    @include govuk-font(16);
+    margin-bottom: $gutterHalf;
+
+    .author {
+      @include govuk-font(19);
+      font-weight: 700;
+    }
+
+    time {
+      color: $greyText;
+    }
+  }
+
+  ul.comment {
+    margin-top: $gutter;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    &.depth-1 {
+      padding-left: $gutter;
+      border-left: 4px solid $borderColour;
+    }
+  }
+
+  .comment-body {
+
+    p {
+      margin-bottom: $gutterHalf;
+    }
+  }
+
+  li.comment {
+    margin: 20px 0px;
+    list-style: none;
+
+    &.depth-1 {
+      margin-bottom: $gutter*2;
+
+      &:last-of-type {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .comment-links {
+    margin-top: $gutterHalf;
+    margin-bottom: $gutterHalf;
+    padding-left: 0;
+    list-style: none;
+
+    a {
+      display: inline-block;
+      margin-left: $gutter;
+      @include govuk-font(16);
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      @media (max-width: $mobileMaxWidth) {
+        display: block;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.media-list {
+  margin: 0;
+  padding-left: 0;
+
+  li {
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

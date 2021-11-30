@@ -1,0 +1,280 @@
+.featured-posts {
+
+  figure {
+    margin: 0 0 10px 0;
+    border: none;
+    background: transparent;
+
+    a {
+      display: block;
+      &:focus {
+        @include box-shadow(inset 0 0 0 2px);
+        border-color: $black;
+      }
+    }
+
+    @media (max-width: $tabletMaxWidth) {
+      max-height: 144px;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      max-width: 100% !important;
+      max-height: none;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .meta {
+    color: $greyText;
+    @include govuk-font(16);
+
+    a {
+      color: $greyText;
+    }
+  }
+
+  h3 {
+    margin-top: $spacingSmall * 2;
+    margin-bottom: $spacingSmall;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: $gutter;
+    @include govuk-font(16);
+  }
+
+  .latest {
+    padding-bottom: $gutter;
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: $gutterHalf;
+      border-top: $greyTopBorder;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0 0 $gutterHalf 0;
+      border-bottom: $greyTopBorder;
+      padding-bottom: $spacingSmall;
+      padding-left: 0;
+
+      li {
+        list-style-image: none;
+        margin: 0 0 $spacingSmall * 2 0;
+        padding: 0;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      .meta {
+        height: auto !important;
+      }
+    }
+
+    p.link {
+      margin-bottom: 0;
+      @include govuk-font(19);
+
+      a {
+        font-weight: bold;
+      }
+    }
+  }
+
+}
+
+hr {
+  &.filters {
+    margin-top: 0;
+    height: 4px;
+    border-top: 4px solid $black;
+  }
+}
+
+.blog-selector {
+  margin-bottom: $gutter;
+  padding-bottom: $gutter;
+
+  h2 {
+    margin-top: $gutterHalf;
+    padding-top: 0;
+  }
+
+  p {
+    @include govuk-font(16);
+  }
+
+  label {
+    margin-bottom: 0;
+    padding-bottom: 2px;
+    font-weight: 700;
+    @include govuk-font(19);
+  }
+
+  input {
+    width: 100%;
+    display: block;
+    margin-bottom: $gutter;
+
+    &.btn {
+      width: auto;
+      padding: 8px 24px;
+
+      &:hover, &:focus {
+        color: $white;
+      }
+    }
+  }
+
+  select {
+    width: 100%;
+  }
+}
+
+.selections {
+  margin-top: $gutterHalf;
+
+  .count {
+    margin-top: 0;
+    margin-bottom: 0;
+    float: left;
+    display: inline;
+    padding-right: $spacingSmall * 2;
+    @include govuk-font(48)
+  }
+
+  span.terms,
+  span.name {
+    display: inline-block;
+    @include govuk-font(16);
+    vertical-align: top;
+    margin-top: 5px;
+  }
+
+  span.name {
+    font-weight: 600;
+  }
+
+  .name {
+    margin-right: 2px;
+  }
+
+  .term {
+    font-weight: normal;
+    margin-left: 3px;
+
+    strong {
+      margin-left: 3px;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      margin-top: 4px;
+    }
+  }
+
+  button.term-x {
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    margin: 0 0 0 5px;
+    padding: 0;
+    color: $greyText;
+    border: none;
+    background: transparent;
+    @include govuk-font(16);
+    font-family: "nta", Helvetica, Arial, sans-serif;
+
+    &:hover, &:focus {
+      color: darken($greyText, 15%);
+      text-decoration: underline;
+    }
+
+    &:focus {
+      background: $govuk-focus-colour;
+      outline: 3px solid $govuk-focus-colour;
+      outline-offset: 0;
+      border: none;
+    }
+  }
+  
+  .term-and {
+    margin-left: 3px;
+  }
+}
+
+.blogs-list {
+  margin: $gutterHalf 0;
+  padding-left: 0;
+  list-style: none;
+
+  li {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    border-top: $greyTopBorder;
+
+    &:first-child {
+      margin-top: $gutterHalf;
+    }
+
+    &.noresults {
+
+      h3 {
+        margin-top: $gutter;
+        margin-bottom: $gutterHalf;
+      }
+
+      p {
+        @include govuk-font(19);
+        margin-bottom: $spacingSmall;
+      }
+
+      ul {
+        margin: 0 0 $gutter 0;
+
+        li {
+          list-style: disc;
+          border-top: none;
+          margin-top: 0;
+        }
+      }
+    }
+
+    .meta {
+      padding-bottom: $spacingSmall;
+      color: $greyText;
+      @include govuk-font(16);
+
+      a {
+        color: $greyText;
+      }
+    }
+  }
+
+  h3 {
+    margin-top: $gutterHalf;
+    margin-bottom: $spacingSmall;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: $gutterHalf;
+    @include govuk-font(16);
+  }
+}
+
+body.home.root {
+
+  .blogs-list {
+    padding-bottom: $gutter;
+  }
+}

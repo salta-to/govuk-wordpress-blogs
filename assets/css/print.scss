@@ -1,0 +1,24 @@
+@media print {
+  a[href]:after {
+    content: "";
+  }
+
+  abbr[title]:after {
+    content: "";
+  }
+
+  .single-post {
+    .govuk-header,
+    header.header,
+    .sidebar-contain,
+    .icons-buttons,
+    .comments,
+    .leave-a-comment,
+    footer.footer,
+    .container.bar,
+    .page-navigation
+    {
+      display: none;
+    }
+  }
+}
