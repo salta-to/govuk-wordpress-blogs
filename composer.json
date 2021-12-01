@@ -1,8 +1,8 @@
 {
-	"name": "salta-to/govuk-wordpress-blogs",
+	"name": "salta-to/govuk-wp-blogs",
 	"description": "A WordPress child theme for the Twenty Twenty-One theme. ",
 	"keywords": ["wordpress", "theme"],
-	"homepage": "https://github.com/salta-to/govuk-wordpress-blogs",
+	"homepage": "https://github.com/salta-to/govuk-wp-blogs",
 	"authors": [
 	{
 	  "name": "Joop Laan",
