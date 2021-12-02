@@ -17,8 +17,8 @@ echo $template->render([
   //     get_template_part('templates/banner');
   // }),
   'skipLinkMessage' => 'Skip to main content',
-  'homepageUrl' => 'https://www.gov.uk/',
-  'logoLinkTitle' => 'Go to the GOV.UK homepage',
+  'homepageUrl' => site_url(),
+  'logoLinkTitle' => 'Go to the homepage',
   'content' => \Missing\Strings::getOutput(function () {
       get_template_part('templates/base');
   }),
