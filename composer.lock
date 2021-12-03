@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8389659cf69fdd79234f734441bda801",
+    "content-hash": "583006c6777783e023b33e704440cd07",
     "packages": [
         {
             "name": "aura/autoload",
@@ -189,6 +189,43 @@
                 "source": "https://github.com/dxw/result/tree/master"
             },
             "time": "2020-06-12T16:01:47+00:00"
+        },
+        {
+            "name": "dxw/roots-composer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dxw/roots-composer.git",
+                "reference": "2fad80195fc15bd48329f398d256fcfd013ca0d5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dxw/roots-composer/zipball/2fad80195fc15bd48329f398d256fcfd013ca0d5",
+                "reference": "2fad80195fc15bd48329f398d256fcfd013ca0d5",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "autoload.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Tom Adams",
+                    "email": "tom@dxw.com",
+                    "homepage": "http://dxw.com"
+                }
+            ],
+            "description": "Roots in a Composer module!",
+            "homepage": "https://github.com/dxw/roots-composer",
+            "support": {
+                "issues": "https://github.com/dxw/roots-composer/issues",
+                "source": "https://github.com/dxw/roots-composer/tree/master"
+            },
+            "abandoned": true,
+            "time": "2015-10-22T15:30:31+00:00"
         },
         {
             "name": "mustache/mustache",
@@ -3708,7 +3745,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "dxw/roots-composer": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
