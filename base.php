@@ -7,6 +7,14 @@ $engine = new Mustache_Engine([
 ]);
 
 $template = $engine->loadTemplate('govuk_template');
+if ( is_multisite() ) {
+	$home_url = network_site_url();
+	$site_name = esc_html( get_site_option( 'site_name' ) );
+} else {
+	$home_url = home_url();
+	$site_name = esc_html( get_bloginfo( 'name' ) );
+}
+
 
 echo $template->render([
   'pageTitle' => html_entity_decode(wp_title('-', false, 'right'), ENT_HTML5 | ENT_QUOTES), // Apparently it doesn't unescape quotes by default for some reason
@@ -17,7 +25,8 @@ echo $template->render([
   //     get_template_part('templates/banner');
   // }),
   'skipLinkMessage' => 'Skip to main content',
-  'homepageUrl' => site_url(),
+  'homepageUrl' => $home_url,
+  'bloginfoName' => $site_name,
   'logoLinkTitle' => 'Go to the homepage',
   'content' => \Missing\Strings::getOutput(function () {
       get_template_part('templates/base');
